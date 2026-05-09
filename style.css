@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Work Sans", sans-serif;
+}
+
+
+.game{
+  width: 450px;
+  height: 450px;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width:768px) {
+  .game{
+    width: 280px;
+    height: 280px;
+  }
+}
+.title{
+  background-color: #fa5;
+  width: 100%;
+  padding: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition-duration: 0.5s;
+}
+@media (max-width:768px) {
+  .title{
+    font-size: 20px;
+  }
+}
+.title span{
+  color: white;
+  
+}
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin:20px auto;
+}
+.square{
+  width: 140px;
+  height: 140px;
+  background-color: #fa5;
+  margin: 5px;
+  transition-duration: .5s;
+  color: white;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media (max-width:768px) {
+  .square{
+    width: 88px;
+    height: 88px;
+    font-size: 40px;
+    margin: 2px;
+  }
+}
+.square:hover{
+  background-color: black;
+}
