@@ -71,3 +71,18 @@ body{
 .square:hover{
   background-color: black;
 }
+.reload{
+  background-color: #fa5;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  font-size: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: start;
+  transition: 0.5s;
+}
+.reload:hover{
+  background-color: #555;
+}

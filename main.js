@@ -1,6 +1,7 @@
 let game=document.querySelector(".game")
 let title=document.querySelector(".title")
 let container=document.querySelector(".container")
+let reload=document.querySelector(".reload")
 let square=[]
 let turn="x"
 
@@ -9,6 +10,18 @@ for (let index = 0; index <9; index++) {
     square[index].classList.add("square")
     square[index].id=`item${index + 1}`
     container.appendChild(square[index])
+}
+function reloadGame() {
+    if (square[0].textContent !=="" &&  square[1].textContent !=="" &&  square[2].textContent !=="" &&  square[3].textContent !=="" &&  square[4].textContent !=="" &&  square[5].textContent !=="" &&  square[6].textContent !=="" &&  square[7].textContent !=="" &&  square[8].textContent !=="") {
+        title.textContent=`reloadGame `
+        title.style.backgroundColor="#555"
+        setInterval(function () {
+            title.textContent += "."
+        },1000)
+        setTimeout(function () {
+            location.reload()
+        },4000)
+    }
 }
 function endGame(num1,num2,num3) {
     title.textContent=`winner ${num1.textContent} `
@@ -67,5 +80,9 @@ for (let index = 0; index <9; index++){
     }
     this.style.backgroundColor="black"
     winner()
+    reloadGame()
 })
 }
+reload.addEventListener("click",function () {
+    location.reload()
+})
